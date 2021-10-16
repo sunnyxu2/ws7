@@ -1,0 +1,9 @@
+Script started on 2021-10-16 04:46:17+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="237" LINES="64"]
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ cd PRODUCTS
+]0;xu@f6linux15: ~/PRODUCTS[01;32mxu@f6linux15[00m:[01;34m~/PRODUCTS[00m$ cut -f 14 o[K0439139597.txt > 0439139597.REVIEWBODY.txt 
+]0;xu@f6linux15: ~/PRODUCTS[01;32mxu@f6linux15[00m:[01;34m~/PRODUCTS[00m$ sed -r 's/\b(and(\s)?|or(\s)?|if(\s)?|in(\s)?|it(\s)?\b//g' 0439139597.REVIEWBODY.txt | awk '!/<(\/)*[a-z]+(\s)*(\/)*>/' | tr -d '[:punct:]' > 0439139597.SANITIZED.txt [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@)
+]0;xu@f6linux15: ~/PRODUCTS[01;32mxu@f6linux15[00m:[01;34m~/PRODUCTS[00m$ greo[Kp -[K[K "an[K[K[K-e 'and)[K(\s)' 0439139597.SANITIZED.txt | wc
+      0       0       0
+]0;xu@f6linux15: ~/PRODUCTS[01;32mxu@f6linux15[00m:[01;34m~/PRODUCTS[00m$ exit
+
+Script done on 2021-10-16 04:50:18+00:00 [COMMAND_EXIT_CODE="0"]

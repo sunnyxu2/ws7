@@ -1,0 +1,5 @@
+  972  cd PRODUCTS
+  973  cut -f 14 0439139597.txt > 0439139597.REVIEWBODY.txt 
+  975  sed -r 's/\b(and(\s)?|or(\s)?|if(\s)?|in(\s)?|it(\s)?)\b//g' 0439139597.REVIEWBODY.txt | awk '!/<(\/)*[a-z]+(\s)*(\/)*>/' | tr -d '[:punct:]' > 0439139597.SANITIZED.txt 
+  976  grep -e 'and(\s)' 0439139597.SANITIZED.txt | wc
+  978  history | tail -n 10 > ~/ws7/cmds.log
